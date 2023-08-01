@@ -1,13 +1,11 @@
 from django.db import models
 from users.models import User
 
-# Create your models here.
-# models = таблицы
-
 
 class ProductCategory(models.Model):
     name = models.CharField(max_length=64, unique=True)
     description = models.TextField(blank=True)
+
     class Meta:
         verbose_name_plural = 'Product Categories'
 
